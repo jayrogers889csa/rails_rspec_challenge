@@ -1,0 +1,7 @@
+<% if @posts.any? %>
+  <% @posts.each do |post| %>
+    <h4><%= link_to post.title, post_path(post) %></h4>
+    <%= simple_format post.content %>
+    <hr>
+  <% end %>
+<% end %>
